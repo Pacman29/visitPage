@@ -6,13 +6,11 @@
 
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
-
-
-import adder from './teaminfo';
+import console from './console';
 
 const rootReducer = combineReducers({
+  console,
   routing: routerReducer,
-  adder,
 });
 
 export default rootReducer;

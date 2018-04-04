@@ -1,4 +1,11 @@
 .image {
-  color: white;
-  font-family: courier, monospace;
+  margin-top: 7vh;
+
+  img {
+    border: solid white 2px;
+  }
+}
+
+.img-responsive {
+  margin: 0 auto;
 }
