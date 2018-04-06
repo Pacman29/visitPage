@@ -1,5 +1,5 @@
 # VisitPage for Hackaton Best
-The working site is here: https://visit-host
+The working site is here: http://kapust1n.ru/
 
 This is single page application (SPA). For create this app, we are use Redux and React.
 
