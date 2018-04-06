@@ -1,10 +1,18 @@
-# M4M Web App [![Build Status](https://travis-ci.org/M4MController/frontend.svg?branch=master)](https://travis-ci.org/M4MController/frontend)
-The working dev site is here: https://m4m-dev.herokuapp.com
+# VisitPage for Hackaton Best
+The working site is here: https://visit-host
+
+This is single page application (SPA). For create this app, we are use Redux and React.
+
+Using Webpack, we collect one index.html file that loads the bundle.js script. It contains both js code and styles for the pages. If you want to know the details, examine the code.
+
+The src folder contains all executable code.
+
+The [style](https://github.com/Pacman29/visitPage/tree/master/src/styles) folder contains all the styles.
 
 ## Running the app
 At first clone the repository:
 ```bash
-$ git clone git@github.com:M4MController/frontend.git && cd frontend
+$ git clone git@github.com:Pacman29/visitPage.git && cd visitPage
 ```
 
 Now you can build and run the app, there are several ways to do it:
@@ -12,12 +20,12 @@ Now you can build and run the app, there are several ways to do it:
 ### Using docker
 1. Build the docker image:
 ```bash
-$ docker build -t m4m-frontend .
+$ docker build -t visitpage .
 ```
 
 2. Run a container (replace `<PORT>` with port you want to listen):
 ```bash
-$ docker run -p <PORT>:80 m4m-frontend
+$ docker run -p <PORT>:80 visitpage
 ```
 
 Open `http://localhost:<PORT>` in the browser.
@@ -30,9 +38,9 @@ Open `http://localhost:<PORT>` in the browser.
 $ npm install
 ```
 
-3. Run the server (replace `<PORT>` with port you want to listen):
+3. Run the server :
 ```bash
-$ PORT=<PORT> npm start
+$ npm start
 ```
 And open `http://localhost:<PORT>` in the browser.
 
@@ -77,3 +85,15 @@ sudo service nginx restart
 ```
 
 Open `http://localhost` in the browser
+
+### Using webpack server
+
+Use
+
+```bash
+npm start
+```
+
+for run webpack server
+
+Open `http://localhost:8080` in the browser
