@@ -12,7 +12,7 @@ The [style](https://github.com/Pacman29/visitPage/tree/master/src/styles) folder
 ## Running the app
 At first clone the repository:
 ```bash
-$ git clone git@github.com:Pacman29/visitPage.git && cd visitPage
+$ git clone https://github.com/Pacman29/visitPage.git && cd visitPage
 ```
 
 Now you can build and run the app, there are several ways to do it:
