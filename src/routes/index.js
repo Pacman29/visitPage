@@ -1,7 +1,4 @@
-/* eslint-disable react/display-name */
-/**
- * Created by ed on 17/03/2018.
- */
+// Main Route
 
 'use strict';
 
@@ -15,6 +12,7 @@ import {Col, Grid, Row} from 'react-bootstrap';
 export default class extends React.Component {
   constructor(){
     super();
+    // Animation for change gradient in backgroun
     let colors = [[62, 35, 255],
       [60, 255, 60],
       [255, 35, 98],

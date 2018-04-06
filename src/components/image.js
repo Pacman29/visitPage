@@ -1,3 +1,4 @@
+/* Image node  */
 import React from 'react';
 
 import 'src/styles/components/image.scss';

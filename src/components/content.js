@@ -1,17 +1,15 @@
+/* Main component*/
+
 import React from 'react';
-import {Image, Console} from './index';
+import {Console, NoMatch} from './index';
 import {Route, Switch} from 'react-router';
 import 'src/styles/components/content.scss';
 
 import * as CONTENTS from '../constants/contents';
-import {Col, Grid, Row} from 'react-bootstrap';
-import {connect} from 'react-redux';
-import * as queryString from 'query-string';
 import UserInfo from './userinfo';
 
 class Content extends React.Component{
   render(){
-    
     return (
       <div className={'content shell'}>
         <div>
@@ -29,6 +27,12 @@ class Content extends React.Component{
           <Route path='/teampage' render={(props) => {
             return (
               <UserInfo {...props}/>
+            );
+          }
+          }/>
+          <Route path='*' render={(props) => {
+            return (
+              <NoMatch {...props}/>
             );
           }
           }/>

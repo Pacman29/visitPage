@@ -1,3 +1,5 @@
+/* UserInfo component*/
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Grid, Row, Col} from 'react-bootstrap';
@@ -44,6 +46,12 @@ class UserInfo extends React.Component{
       this.usertext = CONTENT.CONTENT_ANDREY;
       break;
     }
+    default : {
+      this.image = IMAGES.TEAM;
+      this.headertext = CONTENT.HEADER_USER;
+      this.usertext = CONTENT.CONTENT_USER;
+      break;
+    }
     }
     this.flag = true;
     this.footer = '';
@@ -53,6 +61,7 @@ class UserInfo extends React.Component{
     inputState: PropTypes.string.isRequired,
   };
 
+  // Render footer after inputing main text
   consoleInput(){
     
     if(this.props.inputState === ConsoleInput.INPUTOFF && this.flag){

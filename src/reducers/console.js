@@ -1,3 +1,5 @@
+// Change state after end input in console component
+
 import * as constantsUserInfo from '../constants/actiontypes';
 let initialState = '';
 

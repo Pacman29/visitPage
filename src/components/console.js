@@ -1,3 +1,6 @@
+/* Console component for create DOM
+*  nodes  */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -14,8 +17,10 @@ class Console extends React.Component{
   constructor(props) {
     super(props);
     this.content = props.rendercontent;
-    
+
+    // check need blink cursor in the end of text
     this.enableblinkcursor = props.blink !== undefined ? props.blink : true ;
+    // time interval for inputing text
     this._timer = setInterval(() => {
       this.forceUpdate();
     },5);
@@ -25,12 +30,13 @@ class Console extends React.Component{
     this.props.inputon();
   }
 
+  // add action dispatch
   static propTypes = {
     inputon : PropTypes.func.isRequired,
     inputoff: PropTypes.func.isRequired,
   };
 
-
+  // add char in display text
   addChar(){
     let str = '';
     str = this.content[this.charindex++];
@@ -39,8 +45,8 @@ class Console extends React.Component{
         str += this.content[this.charindex++];
       } while (str[str.length-1] !== '>');
 
-
     this.currentcontent += str;
+    // animation for blink the cursor
     if(this.charindex === this.content.length){
       this.action = undefined;
       clearInterval(this._timer);
@@ -65,8 +71,8 @@ class Console extends React.Component{
     this.currentcontent = this.currentcontent.slice(0,this.currentcontent.length-1);
   }
 
+  // Handler next action for displaying text
   contentHandler(){
-      
     switch (this.action){
     case ACTIONTYPES.ADD_CHAR: {
       this.addChar();
