@@ -85,3 +85,15 @@ sudo service nginx restart
 ```
 
 Open `http://localhost` in the browser
+
+### Using webpack server
+
+Use
+
+```bash
+npm start
+```
+
+for run webpack server
+
+Open `http://localhost:8080` in the browser
